@@ -7,18 +7,25 @@
             <field name="arch" type="xml">
                 <form string="La Escuela">
                     <sheet>
+                        <group>
                         <field name="name"/>
-                        <notebook>
-                            <page string="Diseño de Software">
-                                <group>
-                                    <field name="street"/>
-                                    <field name="street_number"/>
-                                    <field name="city"/>
-                                    <field name="country"/>
-                                    <field name="state"/>
-                                </group>
-                            </page>
-                        </notebook>
+                        </group>
+                    </sheet>
+                    <sheet>
+                        <group>
+                            <field name ="street"/>
+                            <field name="street_number"/>
+                            <field name="city"/>
+                            <field name="state"/>
+                            <field name="country"/>
+                        </group>
+                    </sheet>
+                    <sheet>
+                        <group>
+                            <field name="phone_one"/>
+                            <field name="phone_two"/>
+                            <field name="email"/>
+                        </group>
                     </sheet>
                 </form>
             </field>
@@ -29,6 +36,8 @@
             <field name="arch" type="xml">
                 <tree string="La Escuela">
                    <field name="name"/>
+                    <field name="city"/>
+                    <field name="courses_number"/>
                 </tree>
             </field>
         </record>
