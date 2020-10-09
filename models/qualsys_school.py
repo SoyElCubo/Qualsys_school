@@ -13,7 +13,7 @@ class QualsysSchool(models.Model):
          for data in self:
              data.courses_number = len(data.courses_id)
 
-    name = fields.Char(string = "Nombre", required=True)
+    name = fields.Char(required=True)
     street = fields.Char(string="Calle")
     street_number = fields.Char(string="No. ext.")
     city = fields.Char(string="Ciudad", required=True)

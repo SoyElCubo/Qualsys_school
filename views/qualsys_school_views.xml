@@ -8,25 +8,75 @@
                 <form string="La Escuela">
                     <sheet>
                         <group>
-                        <field name="name"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
                         </group>
                     </sheet>
                     <sheet>
-                        <group>
+                        <group style="width:50%%">
                             <field name="country"/>
                             <field name="city"/>
                             <field name="state"/>
                             <field name ="street"/>
                             <field name="street_number"/>
-
                         </group>
-                    </sheet>
-                    <sheet>
-                        <group>
+                        <group style="width:50%%">
                             <field name="phone_one"/>
                             <field name="phone_two"/>
                             <field name="email"/>
                         </group>
+                    </sheet>
+                    <sheet>
+                        <group>
+                            <field name="courses_number"/>
+                        </group>
+                        <notebook>
+                            <page string="Tipos de Cursos">
+								<field name="courses_id">
+									<tree>
+										<field name="code"/>
+										<field name="name"/>
+										<field name="start_date"/>
+										<field name="end_date"/>
+										<field name="duration"/>
+										<field name="teacher_id"/>
+										<field name="attendees_number"/>
+									</tree>
+									<form>
+										<sheet>
+											<group>
+												<field name="code"/>
+												<field name="name"/>
+											</group>
+										</sheet>
+										<sheet>
+											<group>
+												<field name="start_date"/>
+												<field name="end_date"/>
+												<field name="duration"/>
+											</group>
+										</sheet>
+										<sheet>
+											<group>
+												<field name="teacher_id"/>
+												<field name="attendees_number"/>
+											</group>
+										</sheet>
+										<notebook>
+											<page string="Asistentes">
+												<field name="attendees_id">
+													<tree editable="bottom">
+														<field name="partner_id"/>
+														<field name="age"/>
+													</tree>
+												</field>
+											</page>
+										</notebook>
+									</form>
+								</field>
+							</page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
