@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="qualsys_school_view_form" model="ir.ui.view">
+            <field name="name">qualsys.school.form</field>
+            <field name="model">qualsys.school</field>
+            <field name="arch" type="xml">
+                <form string="La Escuela">
+                    <sheet>
+                        <field name="name"/>
+                        <notebook>
+                            <page string="Diseño de Software">
+                                <group>
+                                    <field name="street"/>
+                                    <field name="street_number"/>
+                                    <field name="city"/>
+                                    <field name="country"/>
+                                    <field name="state"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="qualsys_school_view_tree" model="ir.ui.view">
+            <field name="name">qualsys.school.tree</field>
+            <field name="model">qualsys.school</field>
+            <field name="arch" type="xml">
+                <tree string="La Escuela">
+                   <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <menuitem id="qualsys_school_root" name="La Escuelita" sequence="1"/>
+        <act_window id="qualsys_school_action" name="H1 /H1" res_model="qualsys.school" view_mode="tree,form"/>
+        <menuitem id="qualsys_school_menu" name="Sub-Menu" action="qualsys_school_action" parent="qualsys_school_root"/>
+    </data>
+</odoo>
