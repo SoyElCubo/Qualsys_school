@@ -13,11 +13,12 @@
                     </sheet>
                     <sheet>
                         <group>
-                            <field name ="street"/>
-                            <field name="street_number"/>
+                            <field name="country"/>
                             <field name="city"/>
                             <field name="state"/>
-                            <field name="country"/>
+                            <field name ="street"/>
+                            <field name="street_number"/>
+
                         </group>
                     </sheet>
                     <sheet>
