@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="course_assign_views_form" model="ir.ui.view">
+            <field name="name">course.assign.wizard.view</field>
+            <field name="model">course.assign.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Asociar alumno a curso">
+
+                    <footer>
+
+                        <button string="Cancelar" special="calcel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+       <act_window id="courses_wizard_action" name="Cursos Disponibles" res_model="course.assign.wizard"
+                   binding_model="qualsys.attendees" view_mode="form" target="new"/>
+    </data>
+</odoo>
