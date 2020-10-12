@@ -28,6 +28,6 @@
 		</record>
 
 		<act_window id="qualsys_attendees_action" name="Asistentes" res_model="qualsys.attendees" view_mode="tree,form" />
-
+		<menuitem id="qualsys_attendees_menu" name="Asistentes" action="qualsys_attendees_action" parent="qualsys_school_root"/>
 	</data>
 </odoo>

@@ -55,6 +55,6 @@
 		</record>
 
 		<act_window id="qualsys_courses_action" name="Cursos" res_model="qualsys.courses" view_mode="tree,form" />
-
+        <menuitem id="qualsys_courses_menu" name="Cursos" action="qualsys_courses_action" parent="qualsys_school_root"/>
     </data>
 </odoo>

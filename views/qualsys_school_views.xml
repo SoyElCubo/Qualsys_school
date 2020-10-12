@@ -12,22 +12,20 @@
                                 <field name="name"/>
                             </h1>
                         </group>
-                    </sheet>
-                    <sheet>
-                        <group style="width:50%%">
-                            <field name="country"/>
-                            <field name="city"/>
-                            <field name="state"/>
-                            <field name ="street"/>
-                            <field name="street_number"/>
+                        <group>
+                            <group>
+                                <field name="country"/>
+                                <field name="city"/>
+                                <field name="state"/>
+                                <field name ="street"/>
+                                <field name="street_number"/>
+                            </group>
+                            <group >
+                                <field name="phone_one"/>
+                                <field name="phone_two"/>
+                                <field name="email"/>
+                            </group>
                         </group>
-                        <group style="width:50%%">
-                            <field name="phone_one"/>
-                            <field name="phone_two"/>
-                            <field name="email"/>
-                        </group>
-                    </sheet>
-                    <sheet>
                         <group>
                             <field name="courses_number"/>
                         </group>
@@ -93,7 +91,7 @@
             </field>
         </record>
         <menuitem id="qualsys_school_root" name="La Escuelita" sequence="1"/>
-        <act_window id="qualsys_school_action" name="H1 /H1" res_model="qualsys.school" view_mode="tree,form"/>
-        <menuitem id="qualsys_school_menu" name="Sub-Menu" action="qualsys_school_action" parent="qualsys_school_root"/>
+        <act_window id="qualsys_school_action" name="Nombres de escuelas" res_model="qualsys.school" view_mode="tree,form"/>
+        <menuitem id="qualsys_school_menu" name="Escuelas" action="qualsys_school_action" parent="qualsys_school_root"/>
     </data>
 </odoo>
