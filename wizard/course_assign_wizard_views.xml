@@ -6,9 +6,11 @@
             <field name="model">course.assign.wizard</field>
             <field name="arch" type="xml">
                 <form string="Asociar alumno a curso">
-
+                    <group>
+                        <field name="courses_id"/>
+                    </group>
                     <footer>
-
+                        <button name="asignar_curso" string="Asignar" type="object" class="btn-primary" />
                         <button string="Cancelar" special="calcel" class="oe_link"/>
                     </footer>
                 </form>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="school_assign_views_form" model="ir.ui.view">
+            <field name="name">school.assign.wizard.view</field>
+            <field name="model">school.assign.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Asociar curso a escuela">
+                    <group>
+                        <field name="school_id"/>
+                    </group>
+                    <footer>
+                        <button name="asignar_escuela" string="Asignar" type="object" class="btn-primary" />
+                        <button string="Cancelar" special="calcel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+       <act_window id="school_wizard_action" name="Asignar a escuela" res_model="school.assign.wizard"
+                   binding_model="qualsys.courses" view_mode="form" target="new"/>
+    </data>
+</odoo>
