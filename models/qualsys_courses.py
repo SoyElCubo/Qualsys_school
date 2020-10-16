@@ -12,6 +12,11 @@ class QualsysCourses(models.Model):
     def get_courses_attendees(self):
         for data in self:
             data.attendees_number = len(data.attendees_id)
+            _logger.info("#### Que demonios tiene data de attendees %s" %data)
+
+    @api.onchange('profesor')
+    def get_teachers(self):
+        pass
 
     name = fields.Char(string = "Nombre del curso", required=True)
     duration = fields.Integer(string="Duracion", required=True)
@@ -21,6 +26,6 @@ class QualsysCourses(models.Model):
     attendees_number = fields.Integer(compute = get_courses_attendees, String="No. de Alumnos")
     school_id = fields.Many2one('qualsys.school', string=" Tipo de curso")
     attendees_id = fields.Many2many('qualsys.attendees', string="Asistentes")
-    teacher_id = fields.Many2one('res.users', string="Profesor")
+    profesor = fields.Many2one('qualsys.teachers', string="Profesor")
 
 

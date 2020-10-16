@@ -8,28 +8,27 @@
                 <form string="Cursos">
                     <sheet>
                         <group>
-                            <field name="name"/>
-                            <field name="code"/>
-                        </group>
-                    </sheet>
-                    <sheet>
-                        <group>
-                            <field name="start_date"/>
-                            <field name="end_date"/>
-                            <field name="duration"/>
-                        </group>
-                    </sheet>
-                    <sheet>
-                        <group>
-                            <field name="teacher_id"/>
-                            <field name="attendees_number"/>
-                        </group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                            </group>
+                            <group>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                                <field name="duration"/>
+                            </group>
+                            <group>
+                                <field name="profesor"/>
+                                <field name="attendees_number"/>
+                            </group>
+                         </group>
                         <notebook>
                             <page string="Asistentes">
                                 <field name="attendees_id">
                                     <tree editable="bottom">
                                         <field name="partner_id"/>
                                         <field name="age"/>
+                                         <field name="school_id"/>
                                     </tree>
                                 </field>
 
@@ -48,7 +47,7 @@
                     <field name="start_date"/>
                     <field name="end_date"/>
                     <field name="duration"/>
-                    <field name="teacher_id"/>
+                    <field name="profesor"/>
                     <field name="attendees_number"/>
 				</tree>
 			</field>

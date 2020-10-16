@@ -16,7 +16,7 @@
                             <group>
                                 <field name="country"/>
                                 <field name="city"/>
-                                <field name="state"/>
+                                <field name="state" domain="[('country', '=', country)]"/>
                                 <field name ="street"/>
                                 <field name="street_number"/>
                             </group>
@@ -38,7 +38,7 @@
 										<field name="start_date"/>
 										<field name="end_date"/>
 										<field name="duration"/>
-										<field name="teacher_id"/>
+										<field name="profesor"/>
 										<field name="attendees_number"/>
 									</tree>
 									<form>
@@ -57,7 +57,7 @@
 										</sheet>
 										<sheet>
 											<group>
-												<field name="teacher_id"/>
+												<field name="profesor"/>
 												<field name="attendees_number"/>
 											</group>
 										</sheet>
@@ -84,13 +84,13 @@
             <field name="model">qualsys.school</field>
             <field name="arch" type="xml">
                 <tree string="La Escuela">
-                   <field name="name"/>
+                    <field name="name"/>
                     <field name="city"/>
                     <field name="courses_number"/>
                 </tree>
             </field>
         </record>
-        <menuitem id="qualsys_school_root" name="La Escuelita" sequence="1"/>
+        <menuitem id="qualsys_school_root" name="La Escuelita" web_icon="" sequence="1"/>
         <act_window id="qualsys_school_action" name="Nombres de escuelas" res_model="qualsys.school" view_mode="tree,form"/>
         <menuitem id="qualsys_school_menu" name="Escuelas" action="qualsys_school_action" parent="qualsys_school_root"/>
     </data>

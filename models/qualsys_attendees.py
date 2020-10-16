@@ -5,6 +5,7 @@ from odoo import models, api, fields
 from odoo.exceptions import UserError
 
 class QualsysAttendees(models.Model):
+
     _name = 'qualsys.attendees'
     _description = 'Alumnos'
 
