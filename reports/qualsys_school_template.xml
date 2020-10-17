@@ -6,7 +6,7 @@
                 <t call="web.external_layout">
                     <div class="page">
                         <div class="maquetacion">
-                            <h1>LA ESCUELITA</h1>
+                            <h1>Escuela</h1>
                             <h3><t t-esc="escuelas.name"/></h3>
                             <br/>
                             <table style="width:80%;" border="1" cellspacing="0.5">
