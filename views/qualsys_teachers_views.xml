@@ -9,7 +9,7 @@
                         <sheet>
                             <group>
                                 <group>
-                                    <field name="profesor_name" string="Nombre"/>
+                                    <field name="name" string="Nombre"/>
                                 </group>
                                 <group>
                                     <field name="age"/>
@@ -24,7 +24,7 @@
 			<field name="model">qualsys.teachers</field>
 			<field name="arch" type="xml">
 				<tree string="Profesores">
-					<field name="profesor_name"/>
+					<field name="name"/>
                     <field name="age"/>
                 </tree>
 			</field>

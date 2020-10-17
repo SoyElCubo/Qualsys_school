@@ -18,7 +18,7 @@ class QualsysSchool(models.Model):
         if self.country:
             ids = self.env['res.country.state'].search([('country_id', '=', self.country.id)])
             return {
-                'domain': {'state': [('id', 'in', ids.ids)], }
+                'domain': {'state': [('id', 'in', ids.ids)],}
             }
 
     name = fields.Char(required=True)

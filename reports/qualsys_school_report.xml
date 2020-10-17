@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <report id="qualsys_school_report"
+            string="Reporte De Escuelas"
+            model="qualsys.school"
+            report_type="qweb-pdf"
+            name="qualsys_school.reporte_escuelas"
+            menu="True"/>
+</odoo>

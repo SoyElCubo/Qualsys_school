@@ -11,6 +11,8 @@
               'views/qualsys_teachers_views.xml',
               'wizard/course_assign_wizard_views.xml',
               'wizard/school_assign_wizard_views.xml',
+              'reports/qualsys_school_report.xml',
+              'reports/qualsys_school_template.xml',
               'security/ir.model.access.csv'
               ]
 }

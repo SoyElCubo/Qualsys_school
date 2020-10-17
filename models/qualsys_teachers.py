@@ -5,5 +5,5 @@ class QualsysTeachers(models.Model):
     _name = 'qualsys.teachers'
     _description = 'Profesores'
 
-    profesor_name = fields.Char(string="Nombre")
+    name = fields.Char(string="Nombre")
     age = fields.Integer(string="edad")

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="reporte_escuelas">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="escuelas">
+                <t call="web.external_layout">
+                    <div class="page">
+                        <div class="maquetacion">
+                            <h1>LA ESCUELITA</h1>
+                            <h3><t t-esc="escuelas.name"/></h3>
+                            <br/>
+                            <table style="width:80%;" border="1" cellspacing="0.5">
+                                <body>
+                                    <tr>
+                                        <td>
+                                            <h4>Datos Generales</h4>
+                                        </td>
+                                        <td>
+                                            <strong>Direccion: </strong>
+                                            <span t-esc="escuelas.street"/>
+                                            <span t-esc="escuelas.street_number"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Telefonos: </strong>
+                                            <span t-esc="escuelas.phone_one"/>
+                                            <span t-esc="escuelas.phone_two"/>
+                                        </td>
+                                        <td>
+                                            <strong>Email: </strong>
+                                            <span t-esc="escuelas.email"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Estado: </strong>
+                                             <span t-esc="escuelas.state.display_name"/>
+                                        </td>
+                                        <td>
+                                            <strong>Ciudad: </strong>
+                                            <span t-esc="escuelas.city"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Pais</strong>
+                                            <span t-esc="escuelas.country.name"/>
+                                        </td>
+                                    </tr>
+                                </body>
+                            </table>
+                            <br/><br/>
+                            <t t-if="escuelas.courses_id">
+                                <h4>Cursos</h4>
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th><strong>Codigo</strong></th>
+                                            <th><strong>Nombre del Curso</strong></th>
+                                            <th><strong>Fecha de inicio</strong></th>
+                                            <th><strong>Fecha de conclución</strong></th>
+                                            <th><strong>Horas de duración</strong></th>
+                                            <th><strong>Profesor</strong></th>
+                                            <th><strong>No. de Asistentes</strong></th>
+                                        </tr>
+                                    </thead>
+                                    <body>
+                                        <tr t-foreach="escuelas.courses_id" t-as="datos">
+                                            <td>
+                                                <span t-esc="datos.code"></span>
+                                            </td>
+                                            <td>
+                                                <span t-esc="datos.name"></span>
+                                            </td>
+                                            <td>
+                                                <span t-esc="datos.start_date"></span>
+                                            </td>
+                                            <td>
+                                                <span t-esc="datos.end_date"></span>
+                                            </td>
+                                            <td>
+                                                <span t-esc="datos.duration"></span>
+                                            </td>
+                                            <td>
+                                                <span t-esc="datos.profesor.name"></span>
+                                            </td>
+                                            <td>
+                                                <span t-esc="datos.attendees_number"></span>
+                                            </td>
+                                        </tr>
+                                        <t t-foreach="escuelas.courses_id.attendees_id" t-as="alumno">
+                                            <tr>
+                                                <td>
+                                                    <span t-esc="alumno.partner_id.name"></span>
+                                                </td>
+                                                <td>
+                                                    <span t-esc="alumno.age"></span>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </body>
+                                </table>
+                            </t>
+                            <br/>
+                            <br/>
+                            <p style="page-break-after:always;"/>
+                        </div>
+                    </div>
+
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
